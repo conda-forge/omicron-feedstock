@@ -18,7 +18,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -31,8 +31,8 @@ requirements:
   host:
     - fftw  # [osx]
     - gwollum {{ version }}
-    - root_base 6.18.04
-    - root-binaries 6.18.04
+    - root_base
+    - root-binaries
   run:
     - fftw  # [osx]
     - gwollum
