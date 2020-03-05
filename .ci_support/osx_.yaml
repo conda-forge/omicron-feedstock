@@ -22,6 +22,4 @@ pin_run_as_build:
   fftw:
     max_pin: x
 root_base:
-- 6.18.04
-root_binaries:
-- 6.18.04
+- 6.20.0
