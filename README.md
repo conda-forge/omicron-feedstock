@@ -1,7 +1,7 @@
 About omicron
 =============
 
-Home: http://virgo.in2p3.fr/GWOLLUM/v2r3/Friends/omicron.html
+Home: http://virgo.in2p3.fr/GWOLLUM/v2r4/Friends/omicron.html
 
 Package license: GPL-3.0-or-later
 
