@@ -10,9 +10,9 @@ source:
   url: http://software.ligo.org/lscsoft/source/{{ name }}-{{ version }}.tar.xz
   sha256: bc219733531e41af930d4e603bec68c47a5401eb37211f20734356427b4e3eae
   patches:
-     # use C++17 standard (required to link against ROOT>=6.14)
+    # use C++17 standard (required to link against ROOT>=6.14)
     - c++17.patch
-     # add missing fftw link (only required on macos for some reason)
+    # add missing fftw link (only required on macos for some reason)
     - fft-include.patch   # [osx]
     # add missing link to Streams
     - streams-link.patch
