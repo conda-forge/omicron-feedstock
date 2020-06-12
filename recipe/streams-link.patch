@@ -1,15 +1,6 @@
 diff --git a/Omicron/trunk/src/CMakeLists.txt b/Omicron/trunk/src/CMakeLists.txt
 --- a/Omicron/trunk/src/CMakeLists.txt	(revision 83886)
 +++ b/Omicron/trunk/src/CMakeLists.txt	(working copy)
-@@ -1,8 +1,6 @@
- # -- dependencies -----------
-
- # FFTW
--pkg_check_modules(FFTW REQUIRED "fftw3")
--
- # FrameL
- pkg_check_modules(FRAMEL REQUIRED "framel")
-
 @@ -94,6 +92,7 @@
    Inject
    RootUtils
