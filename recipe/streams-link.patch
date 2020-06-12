@@ -1,0 +1,11 @@
+diff --git a/Omicron/trunk/src/CMakeLists.txt b/Omicron/trunk/src/CMakeLists.txt
+--- a/Omicron/trunk/src/CMakeLists.txt	(revision 83886)
++++ b/Omicron/trunk/src/CMakeLists.txt	(working copy)
+@@ -94,6 +92,7 @@
+   Inject
+   RootUtils
+   Segments
++  Streams
+   Time
+   Triggers
+   )

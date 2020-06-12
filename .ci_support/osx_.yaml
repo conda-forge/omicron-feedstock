@@ -22,4 +22,4 @@ pin_run_as_build:
   fftw:
     max_pin: x
 root_base:
-- 6.20.2
+- '6.20'
