@@ -5,7 +5,7 @@ Home: http://virgo.in2p3.fr/GWOLLUM/v2r4/Friends/omicron.html
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: An algorithm to detect and characterize transient events in gravitational-wave detectors
 
