@@ -1,5 +1,5 @@
 {% set name = "Omicron" %}
-{% set version = "2.4.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 24a4876f6ae7c2ed28aa01f7ac1424349d7d00b5c3b434764a502e1db24c004e
+  sha256: d2dda107042eb4f99b8acf91012e6b5031cf725eca714de8890bdaca103d788e
   patches:
     # use C++17 standard (required to link against ROOT>=6.14)
     - c++17.patch
@@ -17,7 +17,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
