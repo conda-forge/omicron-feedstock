@@ -1,0 +1,12 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index bd55310..f23196b 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -163,6 +163,7 @@ target_link_libraries(
+   ${ROOT_Core_LIBRARY}
+   ${ROOT_Graf_LIBRARY}
+   ${ROOT_Gpad_LIBRARY}
++  ${ROOT_MathCore_LIBRARY}
+   CUtils
+   RootUtils
+   Segments
