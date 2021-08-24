@@ -11,6 +11,10 @@ source:
   patches:
     # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/15
     - omicron-plot-links.patch
+    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/16
+    - libOmicronUtils-links.patch
+    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/17
+    - libOmicron-links.patch
 
 build:
   error_overdepending: true
