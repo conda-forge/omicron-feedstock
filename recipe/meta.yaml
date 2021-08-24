@@ -30,11 +30,11 @@ requirements:
     - make  # [unix]
     - pkg-config  # [unix]
   host:
-    - fftw  # [osx]
+    - fftw
     - gwollum {{ version }}
     - root_base
   run:
-    - fftw  # [osx]
+    - fftw
     - gwollum
     - root_base
 
