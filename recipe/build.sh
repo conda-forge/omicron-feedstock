@@ -4,16 +4,19 @@ mkdir -p _build
 pushd _build
 
 # configure
-cmake ${SRC_DIR} \
+cmake \
+	${SRC_DIR} \
+	${CMAKE_ARGS} \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
-	-DCMAKE_INSTALL_DATADIR:PATH=${SRC_DIR}/trash \
-	-DCMAKE_INSTALL_LIBDIR:PATH="lib" \
-	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=true \
 	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 ;
 
 # build
-cmake --build . --parallel ${CPU_COUNT}
+cmake --build . --parallel ${CPU_COUNT} --verbose
+
+# test
+ctest --parallel ${CPU_COUNT} --verbose
 
 # install
-cmake --build . --parallel ${CPU_COUNT} --target install
+cmake --build . --parallel ${CPU_COUNT} --verbose --target install

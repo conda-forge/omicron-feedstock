@@ -1,5 +1,5 @@
 {% set name = "Omicron" %}
-{% set version = "2.4.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,19 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 24a4876f6ae7c2ed28aa01f7ac1424349d7d00b5c3b434764a502e1db24c004e
+  sha256: d2dda107042eb4f99b8acf91012e6b5031cf725eca714de8890bdaca103d788e
   patches:
-    # use C++17 standard (required to link against ROOT>=6.14)
-    - c++17.patch
-    # add missing fftw link (only required on macos for some reason)
-    - fft-include.patch   # [osx]
+    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/15
+    - omicron-plot-links.patch
+    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/16
+    - libOmicronUtils-links.patch
+    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/17
+    - libOmicron-links.patch
 
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -28,12 +30,11 @@ requirements:
     - make  # [unix]
     - pkg-config  # [unix]
   host:
-    - fftw  # [osx]
+    - fftw
     - gwollum {{ version }}
     - root_base
-    - root-binaries
   run:
-    - fftw  # [osx]
+    - fftw
     - gwollum
     - root_base
 
@@ -43,12 +44,10 @@ test:
   commands:
     # sanity check
     - omicron version
-    - test -x ${PREFIX}/bin/omicron-listfile  # [unix]
-    - test -x ${PREFIX}/bin/omicron-plot  # [unix]
-    - test -x ${PREFIX}/bin/omicron-print  # [unix]
-    - test -x ${PREFIX}/bin/omicron-scanfile  # [unix]
+    # run test commands
+    - for omitest in ${PREFIX}/sbin/omicron-test-*; do ${omitest}; done  # [not osx]
     # check pkg-config
-    - test "$(pkg-config --print-errors --modversion omicron)" == "${PKG_VERSION}"  # [unix]
+    - pkg-config --print-errors --exact-version {{ version }} {{ name|lower }}
 
 about:
   home: https://virgo.docs.ligo.org/virgoapp/{{ name }}/
@@ -71,3 +70,4 @@ about:
 extra:
   recipe-maintainers:
     - duncanmmacleod
+    - rhyspoulton
