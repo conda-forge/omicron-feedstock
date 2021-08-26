@@ -45,7 +45,7 @@ test:
     # sanity check
     - omicron version
     # run test commands
-    - for omitest in ${PREFIX}/sbin/omicron-test-*; do ${omitest}; done  # [not osx]
+    - for omitest in ${PREFIX}/sbin/omicron-test-*; do ${omitest}; done
     # check pkg-config
     - pkg-config --print-errors --exact-version {{ version }} {{ name|lower }}
 
