@@ -3,6 +3,6 @@ __migrator:
   kind: version
   migration_number: 1
   check_solvable: false
-migrator_ts: 1630390214.3825572
+migrator_ts: 1630722380.715523
 root_base:
-- 6.24.4
+- 6.24.6
