@@ -20,3 +20,12 @@ ctest --parallel ${CPU_COUNT} --verbose
 
 # install
 cmake --build . --parallel ${CPU_COUNT} --verbose --target install
+
+# install activate/deactivate scripts
+for action in activate deactivate; do
+	mkdir -pv ${PREFIX}/etc/conda/${action}.d
+	for ext in sh csh; do
+		echo "-- Installing: ${action}.${ext}"
+		cp -v "${RECIPE_DIR}/${action}.${ext}" "${PREFIX}/etc/conda/${action}.d/activate-${PKG_NAME}.${ext}"
+	done
+done
