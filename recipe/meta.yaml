@@ -1,5 +1,5 @@
 {% set name = "Omicron" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d2dda107042eb4f99b8acf91012e6b5031cf725eca714de8890bdaca103d788e
+  sha256: 02a3085079f16b47ca1b8473d5cb352575a14d957ef950b9534ec387072ceadb
   patches:
     # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/15
     - omicron-plot-links.patch
@@ -19,7 +19,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
