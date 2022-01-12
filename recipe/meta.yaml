@@ -8,13 +8,6 @@ package:
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 02a3085079f16b47ca1b8473d5cb352575a14d957ef950b9534ec387072ceadb
-  patches:
-    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/15
-    - omicron-plot-links.patch
-    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/16
-    - libOmicronUtils-links.patch
-    # https://git.ligo.org/virgo/virgoapp/Omicron/-/issues/17
-    - libOmicron-links.patch
 
 build:
   error_overdepending: true
