@@ -31,8 +31,6 @@ requirements:
     - fftw
     - gwollum {{ version }}
     - root_base
-    # https://github.com/conda-forge/root-feedstock/issues/158
-    - nlohmann_json >=3.10.5
   run:
     - fftw
     - gwollum
