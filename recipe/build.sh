@@ -16,7 +16,7 @@ cmake \
 cmake --build . --parallel ${CPU_COUNT} --verbose
 
 # test
-if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "") && "$target_platform" != "osx-64"  ]]; then
+if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "") && "$(uname)" != "Darwin"  ]]; then
    ctest --parallel ${CPU_COUNT} --verbose
 fi
 
