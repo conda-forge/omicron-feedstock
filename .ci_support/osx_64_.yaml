@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,13 +11,13 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '14'
 fftw:
 - '3'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 root_base:
-- 6.26.6
+- 6.26.8
 target_platform:
 - osx-64
 zip_keys:
