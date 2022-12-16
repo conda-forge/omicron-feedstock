@@ -10,7 +10,7 @@ source:
   sha256: e05ae77a91978496e812795129ecfaf13b7fb8a9a932000d354ac21812f46ca7
   patches:
     # use rootcling from build env when cross-compiling
-    - rootcling-cross.patch  # [build_platform != target_platform]
+    - rootcling-cross.patch  # [osx and arm64]
 
 build:
   error_overdepending: true
@@ -25,7 +25,7 @@ requirements:
     - cmake >=3.9.0
     - make  # [unix]
     - pkg-config  # [unix]
-    - root_base  # [build_platform != target_platform]
+    - root_base  # [osx and arm64]
     - sysroot_linux-64 2.17  # [linux64]
   host:
     - fftw
