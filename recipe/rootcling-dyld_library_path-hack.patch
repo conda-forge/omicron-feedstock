@@ -1,0 +1,11 @@
+--- cmake/RootMacros.cmake	2023-05-07 19:27:26.000000000 -0700
++++ cmake/RootMacros.cmake.2	2023-09-08 04:30:08.000000000 -0700
+@@ -606,7 +606,7 @@
+       endif()
+     elseif(TARGET ROOT::rootcling)
+       if(APPLE)
+-        set(command ${CMAKE_COMMAND} -E env "DYLD_LIBRARY_PATH=${ROOT_LIBRARY_DIR}:$ENV{DYLD_LIBRARY_PATH}" $<TARGET_FILE:ROOT::rootcling>)
++        set(command ${CMAKE_COMMAND} -E env $<TARGET_FILE:ROOT::rootcling>)
+       else()
+         set(command ${CMAKE_COMMAND} -E env "LD_LIBRARY_PATH=${ROOT_LIBRARY_DIR}:$ENV{LD_LIBRARY_PATH}" $<TARGET_FILE:ROOT::rootcling>)
+       endif()
