@@ -1,6 +1,0 @@
-# root 6.28.0 is built against, and depends on clang 14.x
-# see https://github.com/conda-forge/root-feedstock/pull/202 or similar
-c_compiler_version:        # [osx]
-  - 14                     # [osx]
-cxx_compiler_version:      # [osx]
-  - 14                     # [osx]
