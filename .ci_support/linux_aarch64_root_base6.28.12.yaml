@@ -21,7 +21,7 @@ docker_image:
 fftw:
 - '3'
 root_base:
-- 6.28.10
+- 6.28.12
 target_platform:
 - linux-aarch64
 zip_keys:
