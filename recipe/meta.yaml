@@ -15,18 +15,18 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake >=3.9.0
     - make  # [unix]
     - pkg-config  # [unix]
     - root_base  # [osx and arm64]
-    - sysroot_linux-64 2.17  # [linux64]
   host:
     - fftw
     - gwollum {{ version }}
