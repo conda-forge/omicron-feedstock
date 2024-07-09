@@ -5,22 +5,23 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-11
+    vmImage: macOS-12
   strategy:
     matrix:
-      osx_64_root_base6.28.12:
-        CONFIG: osx_64_root_base6.28.12
-        UPLOAD_PACKAGES: 'True'
       osx_64_root_base6.30.4:
         CONFIG: osx_64_root_base6.30.4
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_root_base6.28.12:
-        CONFIG: osx_arm64_root_base6.28.12
+      osx_64_root_base6.32.0:
+        CONFIG: osx_64_root_base6.32.0
         UPLOAD_PACKAGES: 'True'
       osx_arm64_root_base6.30.4:
         CONFIG: osx_arm64_root_base6.30.4
         UPLOAD_PACKAGES: 'True'
+      osx_arm64_root_base6.32.0:
+        CONFIG: osx_arm64_root_base6.32.0
+        UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
   # TODO: Fast finish on azure pipelines?
