@@ -8,20 +8,20 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_root_base6.30.4:
-        CONFIG: linux_64_root_base6.30.4
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_root_base6.32.0:
         CONFIG: linux_64_root_base6.32.0
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_root_base6.30.4:
-        CONFIG: linux_aarch64_root_base6.30.4
+      linux_64_root_base6.32.2:
+        CONFIG: linux_64_root_base6.32.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_root_base6.32.0:
         CONFIG: linux_aarch64_root_base6.32.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_root_base6.32.2:
+        CONFIG: linux_aarch64_root_base6.32.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
