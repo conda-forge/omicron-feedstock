@@ -16,6 +16,7 @@ build:
   error_overdepending: true
   error_overlinking: true
   number: 0
+  skip: true  # [osx and root_base == "6.30.4"]
   skip: true  # [osx and arm64]
   skip: true  # [win]
 
