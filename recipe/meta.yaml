@@ -1,5 +1,5 @@
 {% set name = "Omicron" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 526ce0737982c77e46dc89127c03d181e66b9e9c3664987c984e1466578766a8
+  sha256: 05eab1e9461e6a31d644801a61d6a7c49749e835b3a321eb600a4bc40c029f88
   patches:
     # use rootcling from build env when cross-compiling
     - rootcling-cross.patch  # [osx and arm64]
@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 5
+  number: 0
   skip: true  # [win]
 
 requirements:
