@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 5
+  number: 6
   skip: true  # [win]
 
 requirements:
@@ -33,7 +33,7 @@ requirements:
     - root_base
   run:
     - fftw
-    - gwollum
+    - gwollum {{ version }}
     - root_base
 
 test:
