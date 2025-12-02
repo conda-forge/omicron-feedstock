@@ -33,7 +33,7 @@ requirements:
     - root_base
   run:
     - fftw
-    - gwollum
+    - gwollum {{ version }}
     - root_base
 
 test:
