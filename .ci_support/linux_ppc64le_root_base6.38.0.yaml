@@ -19,7 +19,7 @@ docker_image:
 fftw:
 - '3'
 root_base:
-- 6.36.04
+- 6.38.0
 target_platform:
 - linux-ppc64le
 zip_keys:

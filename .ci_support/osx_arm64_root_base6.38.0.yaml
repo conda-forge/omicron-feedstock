@@ -23,7 +23,7 @@ fftw:
 macos_machine:
 - arm64-apple-darwin20.0.0
 root_base:
-- 6.36.04
+- 6.38.0
 target_platform:
 - osx-arm64
 zip_keys:

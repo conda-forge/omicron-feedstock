@@ -8,17 +8,17 @@ jobs:
     vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_root_base6.34.10:
-        CONFIG: osx_64_root_base6.34.10
+      osx_64_root_base6.36.8:
+        CONFIG: osx_64_root_base6.36.8
         UPLOAD_PACKAGES: 'True'
-      osx_64_root_base6.36.04:
-        CONFIG: osx_64_root_base6.36.04
+      osx_64_root_base6.38.0:
+        CONFIG: osx_64_root_base6.38.0
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_root_base6.34.10:
-        CONFIG: osx_arm64_root_base6.34.10
+      osx_arm64_root_base6.36.8:
+        CONFIG: osx_arm64_root_base6.36.8
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_root_base6.36.04:
-        CONFIG: osx_arm64_root_base6.36.04
+      osx_arm64_root_base6.38.0:
+        CONFIG: osx_arm64_root_base6.38.0
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}

@@ -19,9 +19,9 @@ docker_image:
 fftw:
 - '3'
 root_base:
-- 6.34.10
+- 6.38.0
 target_platform:
-- linux-aarch64
+- linux-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
