@@ -22,7 +22,6 @@ original matlab code has been replaced by a C++ architecture and many
 steps have been removed to run faster.  The name Omicron was chosen to
 recall the Omega inheritance.
 
-
 Current build status
 ====================
 
@@ -41,73 +40,108 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_root_base6.36.8</td>
+              <td>linux_64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_root_base6.38.0</td>
+              <td>linux_64_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_root_base6.36.8</td>
+              <td>linux_64_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_root_base6.38.0</td>
+              <td>linux_aarch64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_root_base6.36.8</td>
+              <td>linux_aarch64_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_root_base6.38.0</td>
+              <td>linux_aarch64_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_root_base6.36.8</td>
+              <td>linux_ppc64le_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.36.8root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_root_base6.38.0</td>
+              <td>linux_ppc64le_root_base6.38.0root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0root_cxx_standard20" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_root_base6.36.8</td>
+              <td>linux_ppc64le_root_base6.38.0root_cxx_standard23</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.36.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_root_base6.38.0</td>
+              <td>osx_64_root_base6.36.8root_cxx_standard20</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.36.8root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_root_base6.38.0root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_root_base6.38.0root_cxx_standard23</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root_base6.38.0root_cxx_standard23" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.36.8root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.36.8root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.38.0root_cxx_standard20</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0root_cxx_standard20" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_root_base6.38.0root_cxx_standard23</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8796&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/omicron-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_root_base6.38.0root_cxx_standard23" alt="variant">
                 </a>
               </td>
             </tr>
