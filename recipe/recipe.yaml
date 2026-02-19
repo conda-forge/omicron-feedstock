@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  name: Omicron
+  version: 4.1.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 526ce0737982c77e46dc89127c03d181e66b9e9c3664987c984e1466578766a8
+
+build:
+  number: 7
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - cmake >=3.9.0
+    - if: unix
+      then: make
+    - if: unix
+      then: pkg-config
+  host:
+    - fftw
+    - gwollum ==${{ version }}
+    - root_base
+    - root_cxx_standard
+  run:
+    - gwollum ==${{ version }}
+
+tests:
+  - requirements:
+      run:
+        - pkg-config
+    script:
+      - omicron version
+      - pkg-config --print-errors --exact-version ${{ version }} ${{ name|lower }}
+      - if: unix
+        then: test "${OMICRON_HTML}" == "${PREFIX}/share/omicron/html"
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: An algorithm to detect and characterize transient events in gravitational-wave detectors
+  description: |
+    Omicron has been derived from a well-known 'burst-type' search pipeline
+    called Q-pipeline (a.k.a Omega).  Q-pipeline is able to detect and
+    characterize detector glitches with a very good efficiency and precision.
+    So, the idea was to adapt it for detector characterization purposes,
+    i.e. to run it over many auxiliary channels.  To achieve this, the
+    original matlab code has been replaced by a C++ architecture and many
+    steps have been removed to run faster.  The name Omicron was chosen to
+    recall the Omega inheritance.
+  homepage: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+  repository: https://git.ligo.org/virgo/virgoapp/${{ name }}.git
+  documentation: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
+    - FlorentRobinet

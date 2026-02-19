@@ -1,11 +1,13 @@
 #!/bin/bash
+set -ex
 
 mkdir -p _build
 pushd _build
 
 # hack rootcling calls to not set DYLD_LIBRARY_PATH
+# (not needed for ROOT >= 6.38.0 where this was removed upstream)
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -N -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # configure
@@ -13,7 +15,6 @@ cmake \
 	${SRC_DIR} \
 	${CMAKE_ARGS} \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
-	-DCMAKE_CROSSCOMPILING_EMULATOR:STRING="${CMAKE_CROSSCOMPILING_EMULATOR}" \
 	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=true \
 	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 ;
@@ -22,8 +23,8 @@ cmake \
 cmake --build . --parallel ${CPU_COUNT} --verbose
 
 # test
-if [[ ("${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "") && "$(uname)" != "Darwin"  ]]; then
-   ctest --parallel ${CPU_COUNT} --verbose
+if [[ "$(uname)" != "Darwin" ]]; then
+    ctest --parallel ${CPU_COUNT} --verbose
 fi
 
 # install
@@ -31,7 +32,7 @@ cmake --build . --parallel ${CPU_COUNT} --verbose --target install
 
 # revert hack
 if [[ "${target_platform}" == "osx-64" ]]; then
-	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX
+	patch -R -p0 -f -i $RECIPE_DIR/rootcling-dyld_library_path-hack.patch -d $PREFIX || true
 fi
 
 # install activate/deactivate scripts

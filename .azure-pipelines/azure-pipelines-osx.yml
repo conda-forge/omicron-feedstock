@@ -5,21 +5,33 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-15
+    vmImage: $(VMIMAGE)
   strategy:
     matrix:
-      osx_64_root_base6.34.10:
-        CONFIG: osx_64_root_base6.34.10
+      osx_64_root_base6.36.8root_cxx_standard20:
+        CONFIG: osx_64_root_base6.36.8root_cxx_standard20
         UPLOAD_PACKAGES: 'True'
-      osx_64_root_base6.36.04:
-        CONFIG: osx_64_root_base6.36.04
+        VMIMAGE: macOS-15
+      osx_64_root_base6.38.0root_cxx_standard20:
+        CONFIG: osx_64_root_base6.38.0root_cxx_standard20
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_root_base6.34.10:
-        CONFIG: osx_arm64_root_base6.34.10
+        VMIMAGE: macOS-15
+      osx_64_root_base6.38.0root_cxx_standard23:
+        CONFIG: osx_64_root_base6.38.0root_cxx_standard23
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_root_base6.36.04:
-        CONFIG: osx_arm64_root_base6.36.04
+        VMIMAGE: macOS-15
+      osx_arm64_root_base6.36.8root_cxx_standard20:
+        CONFIG: osx_arm64_root_base6.36.8root_cxx_standard20
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+      osx_arm64_root_base6.38.0root_cxx_standard20:
+        CONFIG: osx_arm64_root_base6.38.0root_cxx_standard20
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+      osx_arm64_root_base6.38.0root_cxx_standard23:
+        CONFIG: osx_arm64_root_base6.38.0root_cxx_standard23
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
   timeoutInMinutes: 360
   variables: {}
 
