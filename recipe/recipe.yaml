@@ -13,7 +13,7 @@ source:
   sha256: 526ce0737982c77e46dc89127c03d181e66b9e9c3664987c984e1466578766a8
 
 build:
-  number: 7
+  number: 8
   skip: win
 
 requirements:
@@ -23,9 +23,9 @@ requirements:
     - ${{ stdlib("c") }}
     - cmake >=3.9.0
     - if: unix
-      then: make
-    - if: unix
-      then: pkg-config
+      then:
+        - make
+        - pkg-config
   host:
     - fftw
     - gwollum ==${{ version }}
