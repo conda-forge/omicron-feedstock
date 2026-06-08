@@ -21,13 +21,13 @@ cxx_compiler_version:
 fftw:
 - '3'
 macos_machine:
-- arm64-apple-darwin20.0.0
+- x86_64-apple-darwin13.4.0
 root_base:
-- 6.36.8
+- 6.40.0
 root_cxx_standard:
 - '20'
 target_platform:
-- osx-arm64
+- osx-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
