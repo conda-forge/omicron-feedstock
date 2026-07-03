@@ -23,7 +23,7 @@ fftw:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 root_base:
-- 6.38.0
+- 6.40.2
 root_cxx_standard:
 - '20'
 target_platform:
