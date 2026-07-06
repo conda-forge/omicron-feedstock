@@ -19,7 +19,7 @@ docker_image:
 fftw:
 - '3'
 root_base:
-- 6.36.8
+- 6.40.2
 root_cxx_standard:
 - '20'
 target_platform:
