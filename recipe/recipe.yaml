@@ -1,17 +1,16 @@
 schema_version: 1
 
 context:
-  name: Omicron
   version: 4.1.1
   # Omicron and GWOLLUM are developed in parallel and must be kept in sync
   gwollum_version: "${{ version }}"
 
 package:
-  name: ${{ name|lower }}
+  name: omicron
   version: ${{ version }}
 
 source:
-  url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
+  url: https://git.ligo.org/virgo/virgoapp/Omicron/-/archive/${{ version }}/Omicron-${{ version }}.tar.gz
   sha256: 526ce0737982c77e46dc89127c03d181e66b9e9c3664987c984e1466578766a8
 
 build:
@@ -42,7 +41,7 @@ tests:
         - pkg-config
     script:
       - omicron version
-      - pkg-config --print-errors --exact-version ${{ version }} ${{ name|lower }}
+      - pkg-config --print-errors --exact-version ${{ version }} omicron
       - if: unix
         then: test "${OMICRON_HTML}" == "${PREFIX}/share/omicron/html"
 
@@ -59,9 +58,9 @@ about:
     original matlab code has been replaced by a C++ architecture and many
     steps have been removed to run faster.  The name Omicron was chosen to
     recall the Omega inheritance.
-  homepage: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
-  repository: https://git.ligo.org/virgo/virgoapp/${{ name }}.git
-  documentation: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+  homepage: https://virgo.docs.ligo.org/virgoapp/Omicron/
+  repository: https://git.ligo.org/virgo/virgoapp/Omicron.git
+  documentation: https://virgo.docs.ligo.org/virgoapp/Omicron/
 
 extra:
   recipe-maintainers:
